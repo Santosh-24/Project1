@@ -32,3 +32,13 @@ Create Node.js Server
 10.Add bootstrap UI framework
 10.1.npm insttall react-bootstrap bootstrap
 10.2.update App.js
+11.Creating Product component
+12.Create Product Details Screen
+12.1.Fetch Product from Backend
+12.2.Create 3 columns for image,info and action
+13.Creating custom loading style//to be done
+14.Implementing Add to Cart
+14.1.Create React Context
+14.2.define Reducer
+14.3.create Store Provider
+14.4.Implement add to cart button click handler
