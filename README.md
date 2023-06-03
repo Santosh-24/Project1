@@ -42,3 +42,18 @@ Create Node.js Server
 14.2.define Reducer
 14.3.create Store Provider
 14.4.Implement add to cart button click handler
+15.Complete Add to Cart
+15.1.check exist item in the cart
+15.2.check count in stock in backend
+16.Create cart screen
+16.1.create 2 columns
+16.2.displat items list
+16.3.create action column
+17.Complete cart screen
+17.1.click handler for inc/dec item
+17.2.click handler for remove item
+17.3.click handler for checkout
+18.Create Signin Screen
+18.1.create signin form
+18.2.add email and password
+18.3.add signin button
