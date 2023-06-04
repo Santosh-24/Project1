@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: "1",
+      // _id: "1",
       name: "Chakkras",
       slug: "Diwali-Chakkaras",
       category: "fancy",
@@ -11,7 +11,7 @@ const data = {
       price: 80,
     },
     {
-      _id: "2",
+      // _id: "2",
       name: "Flower pots",
       slug: "Diwali-FlowerPots",
       category: "fancy",
@@ -21,7 +21,7 @@ const data = {
       price: 90,
     },
     {
-      _id: "3",
+      // _id: "3",
       name: "Atom Bombs",
       slug: "Diwali-AtomBombs",
       category: "Bombs",
@@ -31,8 +31,8 @@ const data = {
       price: 60,
     },
     {
-      _id: "4",
-      name: "Chakkras",
+      // _id: "4",
+      name: "Chakkkras",
       slug: "Diwali-Chakkarass",
       category: "fancy",
       image: "/images/Chakkras.jpg",

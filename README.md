@@ -57,3 +57,14 @@ Create Node.js Server
 18.1.create signin form
 18.2.add email and password
 18.3.add signin button
+19.Connect to Mongodb database
+19.1.create atlas mongodb database
+19.2.install local mongodb databse
+19.3.npm install mongoose
+19.4.connect to mongodb database
+20.Seed sample data to mongodb database
+20.1.create product model
+20.2.create user model
+20.3.create seed route
+20.4.use route in server.js
+20.5.seed sample product
