@@ -68,3 +68,11 @@ Create Node.js Server
 20.3.create seed route
 20.4.use route in server.js
 20.5.seed sample product
+21.seed Sample Users
+21.1.create user model
+21.2.seed sample users
+21.3.create user routes
+22.crete signin backend api
+22.1.create signin api
+22.2.npm install json webtoken
+22.3.define generate token
