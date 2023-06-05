@@ -80,3 +80,7 @@ Create Node.js Server
 23.1.handel submit action
 23.2.save token in store and local storage
 23.3.show user name in header
+24.create shipping screen
+24.1.create form inputs
+24.2.handle save shipping address
+24.3.add checkout wizard bar
