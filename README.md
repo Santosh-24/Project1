@@ -94,3 +94,7 @@ Create Node.js Server
 27.Create Place Order Screen
 27.1.show cart items,payment method and address
 27.2.create order create api
+27.3.calculate order summary
+28.Implement Place order action
+28.1.handle place order action
+28.2.create order create api
