@@ -84,3 +84,13 @@ Create Node.js Server
 24.1.create form inputs
 24.2.handle save shipping address
 24.3.add checkout wizard bar
+25.Create Signup screen
+25.1.create input forms
+25.2.handle submit
+25.3.create backend api
+26.Implement Select Payment method screen
+26.1.create input forms
+26.2.handle submit
+27.Create Place Order Screen
+27.1.show cart items,payment method and address
+27.2.create order create api
