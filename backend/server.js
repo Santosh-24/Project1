@@ -1,5 +1,5 @@
 import express from "express";
-import data from "./data.js";
+import path from "path";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import seedRouter from "./routes/seedRoutes.js";
@@ -33,6 +33,12 @@ app.use("/api/orders", orderRouter);
 // app.get("/api/products", (req, res) => {
 //   res.send(data.products);
 // });
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/tiger-crackers/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/tiger-crackers/build/index.html"))
+);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
