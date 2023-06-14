@@ -21,9 +21,10 @@ import OrderScreen from "./screens/OrderScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import Button from "react-bootstrap/Button";
+import { Article } from "phosphor-react";
 import { getError } from "./utils";
 import axios from "axios";
-import SearchBox from "./components/SearchBox";
+// import SearchBox from "./components/SearchBox";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -69,14 +70,14 @@ function App() {
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
-                <i className="fas fa-bars"></i>
+                <Article size={40} />
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>Tiger-Crackersss</Navbar.Brand>
+                <Navbar.Brand> Tiger-Crackersss</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
+                {/* <SearchBox /> */}
                 <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
                     Cart
