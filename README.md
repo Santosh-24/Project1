@@ -121,3 +121,14 @@ Create Node.js Server
 32.2.show user information
 32.3.create user update api
 32.4.update user info
+33.Publish To Heroku
+33.1. create and config node project
+33.2. serve build folder in frontend folder
+33.3. Create heroku account
+33.4. connect it to github
+33.5. Create mongodb atlas database
+33.6. Set database connection in heroku env variables
+33.7. Commit and push
+34.Add Sidebar and Search Box
+34.1. add sidebar
+34.2. add search box
