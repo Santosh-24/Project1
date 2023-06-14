@@ -31,7 +31,7 @@ const data = {
       name: "Flower pots",
       slug: "Diwali-FlowerPots",
       category: "fancyyy",
-      image: "/images/Flower-pots.jpg",
+      image: "/images/chakkras.jpg",
       countInStock: 10,
       items: 8,
       price: 90,
