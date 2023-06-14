@@ -11,6 +11,7 @@ export default function SearchBox() {
   const [query, setQuery] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
+    e.target.reset();
     navigate(query ? `/search/?query=${query}` : "/search");
   };
 

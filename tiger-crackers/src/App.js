@@ -25,6 +25,10 @@ import { Article } from "phosphor-react";
 import { getError } from "./utils";
 import axios from "axios";
 import SearchBox from "./components/SearchBox";
+import SearchScreen from "./screens/SearchScreen";
+import ProtectedRoute from "./components/ProtectedRoute";
+import DashboardScreen from "./screens/DashboardScreen";
+import AdminRoute from "./components/AdminRoute";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -109,6 +113,22 @@ function App() {
                       Sign In
                     </Link>
                   )}
+                  {userInfo && userInfo.isAdmin && (
+                    <NavDropdown title="Admin" id="admin-nav-dropdown">
+                      <LinkContainer to="/admin/dashboard">
+                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/productlist">
+                        <NavDropdown.Item>Products</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/orderlist">
+                        <NavDropdown.Item>Orders</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/userlist">
+                        <NavDropdown.Item>Users</NavDropdown.Item>
+                      </LinkContainer>
+                    </NavDropdown>
+                  )}
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -128,7 +148,10 @@ function App() {
             {categories.map((category) => (
               <Nav.Item key={category}>
                 <LinkContainer
-                  to={`/search/category=${category}`}
+                  to={{
+                    pathname: "/search",
+                    search: `?category=${category}`,
+                  }}
                   onClick={() => setSidebarIsOpen(false)}
                 >
                   <Nav.Link>{category}</Nav.Link>
@@ -142,17 +165,45 @@ function App() {
             <Routes>
               <Route path="/product/:slug" Component={ProductScreen} />
               <Route path="/cart" Component={CartScreen} />
+              <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" Component={SigninScreen} />
               <Route path="/signup" Component={SignupScreen} />
-              <Route path="/profile" element={<ProfileScreen />} />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <ProfileScreen />
+                  </ProtectedRoute>
+                }
+              />
               <Route
                 path="/orderhistory"
-                element={<OrderHistoryScreen />}
+                element={
+                  <ProtectedRoute>
+                    <OrderHistoryScreen />
+                  </ProtectedRoute>
+                }
               ></Route>
               <Route path="/shipping" Component={ShippingAddressScreen} />
               <Route path="/payment" Component={PaymentMethodScreen} />
               <Route path="/placeorder" Component={PlaceOrderScreen} />
-              <Route path="/order/:id" Component={OrderScreen} />
+              <Route
+                path="/order/:id"
+                element={
+                  <ProtectedRoute>
+                    <OrderScreen />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              {/* Admin Routes */}
+              <Route
+                path="/admin/dashboard"
+                element={
+                  <AdminRoute>
+                    <DashboardScreen />
+                  </AdminRoute>
+                }
+              ></Route>
               <Route path="/" Component={HomeScreen} />
             </Routes>
           </Container>
